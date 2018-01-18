@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "uglify":"uglifyjs src/models/* src/frontend.js -m -c -o build/app.js",
+    "copy-files": "cp src/*.html build/ & cp src/*.css build/",
+    "build": "npm run copy-files && npm run uglify"
   },
   "author": "Xayaseth Boudsady",
   "license": "MIT",

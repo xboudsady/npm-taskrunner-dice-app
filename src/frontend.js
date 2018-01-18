@@ -1,12 +1,13 @@
+
 function displayNumber(number) {
-    let placeholder = document.getElementById("placeholder");
+    var placeholder = document.getElementById("placeholder");
     placeholder.innerHTML = number;
 }
 
-const dice = new Dice(6);
-const button = document.getElementById("button");
+var dice = new Dice(6);
+var button = document.getElementById("button");
 
-button.addEventListener('click', () => {
-    let result = dice.roll();
+button.onclick = function () {
+    var result = dice.roll();
     displayNumber(result);
-});
+};

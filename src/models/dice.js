@@ -1,12 +1,12 @@
-!function(root) {
+!function (root) {
     "use strict";
 
     function Dice(sides) {
         this.sides = sides;
     }
 
-    Dice.prototype.roll = () => {
-        let randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    Dice.prototype.roll = function () {
+        var randomNumber = Math.floor(Math.random() * this.sides) + 1;
         return randomNumber;
     }
 
